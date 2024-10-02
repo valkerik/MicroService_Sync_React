@@ -30,7 +30,7 @@ public class ReactiveMessageService {
 
     public Mono<Void> generateMessages(Integer count) {
         if(count == null || count <= 0  ) {
-          return  Mono.error(new CountErrorException("Количество собщений должно быть больше 0 и не может быть пустым!"));
+          return  Mono.error(new CountErrorException("Количество сообщений должно быть больше 0 и не может быть пустым!"));
         }
         Instant start = Instant.now(); // Начало измерения времени
         return Flux.range(0, count)
